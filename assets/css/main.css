@@ -3343,3 +3343,78 @@ input, select, textarea {
 			margin: 0 0.5em 0.5em 0;
 			padding: 0 0.8em;
 		}
+
+
+/* ---- Custom: project cards (2 images + 1 video) ---- */
+
+	.projects .project {
+		background: #1b1e27;
+		border: solid 2px #2e3340;
+		border-radius: 5px;
+		margin: 0 0 2.25em 0;
+		padding: 2em;
+	}
+
+		.projects .project:last-child {
+			margin-bottom: 0;
+		}
+
+		.projects .project .details h4 {
+			color: #e4e7ee;
+			font-size: 1.35em;
+		}
+
+		.projects .project .details p {
+			margin-bottom: 1.25em;
+		}
+
+		.projects .project .media {
+			display: grid;
+			gap: 1em;
+			grid-template-columns: 1fr 1fr;
+			margin: 0 0 1.75em 0;
+		}
+
+			.projects .project .media figure {
+				margin: 0;
+			}
+
+			.projects .project .media .video {
+				grid-column: 1 / -1;
+			}
+
+			.projects .project .media video {
+				aspect-ratio: 16 / 9;
+				background: #000;
+				border-radius: 5px;
+				display: block;
+				width: 100%;
+			}
+
+			.projects .project .media .shot img {
+				aspect-ratio: 4 / 3;
+				border-radius: 5px;
+				display: block;
+				object-fit: cover;
+				width: 100%;
+			}
+
+		.projects .project > :last-child {
+			margin-bottom: 0;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		.projects .project {
+			padding: 1.25em;
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.projects .project .media {
+			grid-template-columns: 1fr;
+		}
+
+	}

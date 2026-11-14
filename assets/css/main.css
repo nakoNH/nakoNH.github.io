@@ -3344,20 +3344,38 @@ input, select, textarea {
 			padding: 0 0.8em;
 		}
 
+/* ---- Custom: projects (pictures left, text right, video below) ---- */
 
-/* ---- Custom: project cards (2 images + 1 video) ---- */
-
-	.projects .project {
-		background: #1b1e27;
-		border: solid 2px #2e3340;
-		border-radius: 5px;
-		margin: 0 0 2.25em 0;
-		padding: 2em;
+	.projects .project + .project {
+		border-top: solid 3px #1e3a8a;
+		margin-top: 3.375em;
+		padding-top: 3.375em;
 	}
 
-		.projects .project:last-child {
-			margin-bottom: 0;
+		.projects .project .top {
+			align-items: center;
+			display: grid;
+			gap: 2.25em;
+			grid-template-columns: 1fr 1fr;
+			margin: 0 0 2.25em 0;
 		}
+
+		.projects .project figure {
+			margin: 0;
+		}
+
+		.projects .project .pics {
+			display: grid;
+			gap: 1em;
+		}
+
+			.projects .project .shot img {
+				aspect-ratio: 4 / 3;
+				border-radius: 5px;
+				display: block;
+				object-fit: cover;
+				width: 100%;
+			}
 
 		.projects .project .details h4 {
 			color: #e4e7ee;
@@ -3368,53 +3386,36 @@ input, select, textarea {
 			margin-bottom: 1.25em;
 		}
 
-		.projects .project .media {
-			display: grid;
-			gap: 1em;
-			grid-template-columns: 1fr 1fr;
-			margin: 0 0 1.75em 0;
+		.projects .project .details > :last-child,
+		.projects .project .demo > :last-child {
+			margin-bottom: 0;
 		}
 
-			.projects .project .media figure {
-				margin: 0;
-			}
+		.projects .project .demo h5 {
+			color: #6c93f0;
+			font-size: 0.9em;
+			letter-spacing: 0.1em;
+			margin: 0 0 1em 0;
+			text-transform: uppercase;
+		}
 
-			.projects .project .media .video {
-				grid-column: 1 / -1;
-			}
-
-			.projects .project .media video {
-				aspect-ratio: 16 / 9;
-				background: #000;
-				border-radius: 5px;
-				display: block;
-				width: 100%;
-			}
-
-			.projects .project .media .shot img {
-				aspect-ratio: 4 / 3;
-				border-radius: 5px;
-				display: block;
-				object-fit: cover;
-				width: 100%;
-			}
-
-		.projects .project > :last-child {
-			margin-bottom: 0;
+		.projects .project .demo video {
+			aspect-ratio: 16 / 9;
+			background: #000;
+			border-radius: 5px;
+			display: block;
+			width: 100%;
 		}
 
 	@media screen and (max-width: 736px) {
 
-		.projects .project {
-			padding: 1.25em;
+		.projects .project .top {
+			gap: 1.5em;
+			grid-template-columns: 1fr;
 		}
 
-	}
-
-	@media screen and (max-width: 480px) {
-
-		.projects .project .media {
-			grid-template-columns: 1fr;
+		.projects .project .pics {
+			grid-template-columns: 1fr 1fr;
 		}
 
 	}

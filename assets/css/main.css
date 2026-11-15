@@ -3378,7 +3378,7 @@ input, select, textarea {
 		}
 
 			.projects .project .shot img {
-				aspect-ratio: 4 / 3;
+				aspect-ratio: 16 / 9;
 				border-radius: 5px;
 				display: block;
 				object-fit: cover;
@@ -3409,4 +3409,27 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+			}
+
+/* ---- Custom: footer contact links ---- */
+
+	#footer .copyright li {
+		color: #a8adb8;
+	}
+
+		#footer .copyright li a {
+			color: #6c93f0;
+		}
+
+			#footer .copyright li a:hover {
+				color: #ffffff !important;
+			}
+
+		#footer .copyright li.credit,
+		#footer .copyright li.credit a {
+			color: #6b7280;
+		}
+
+			#footer .copyright li.credit a:hover {
+				color: #a8adb8 !important;
 			}

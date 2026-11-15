@@ -3393,9 +3393,20 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		.projects .project .demo img {
+		.projects .project .demo .embed {
+			aspect-ratio: 16 / 9;
+			background: #000;
 			border-radius: 5px;
-			display: block;
-			height: auto;
+			overflow: hidden;
+			position: relative;
 			width: 100%;
 		}
+
+			.projects .project .demo .embed iframe {
+				border: 0;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}

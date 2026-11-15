@@ -3445,3 +3445,36 @@ input, select, textarea {
 		font-size: 0.85em;
 		margin: 0 0 1em 0;
 	}
+
+/* ---- Custom: grouped skills ---- */
+
+	.skill-group + .skill-group {
+		margin-top: 1.5em;
+	}
+
+	.skill-group h4 {
+		border-bottom: solid 2px #222633;
+		color: #6c93f0;
+		font-size: 0.9em;
+		letter-spacing: 0.1em;
+		margin: 0 0 1.75em 0;
+		padding-bottom: 0.75em;
+		text-transform: uppercase;
+	}
+
+	.skill-group ul.feature-icons {
+		margin-bottom: 0;
+	}
+
+		.skill-group ul.feature-icons li strong {
+			color: #e4e7ee;
+			display: block;
+		}
+
+		.skill-group ul.feature-icons li .desc {
+			color: #8b92a3;
+			display: block;
+			font-size: 0.85em;
+			line-height: 1.5;
+			margin-top: 0.2em;
+		}
